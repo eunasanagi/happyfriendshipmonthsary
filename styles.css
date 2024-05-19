@@ -1,0 +1,136 @@
+@media screen and (max-width: 768px) {
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d0e4f7;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffec40;
+    border-radius: 50%;
+    animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotateZ(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotateZ(360deg);
+    }
+}
+
+.confetti:nth-child(1) {
+    left: 10%;
+    animation-duration: 6s;
+}
+
+.confetti:nth-child(2) {
+    left: 20%;
+    animation-duration: 4s;
+}
+
+.confetti:nth-child(3) {
+    left: 30%;
+    animation-duration: 5s;
+}
+
+.confetti:nth-child(4) {
+    left: 40%;
+    animation-duration: 3s;
+}
+
+.confetti:nth-child(5) {
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.confetti:nth-child(6) {
+    left: 60%;
+    animation-duration: 4s;
+}
+
+.confetti:nth-child(7) {
+    left: 70%;
+    animation-duration: 5s;
+}
+
+.confetti:nth-child(8) {
+    left: 80%;
+    animation-duration: 3s;
+}
+
+.confetti:nth-child(9) {
+    left: 90%;
+    animation-duration: 6s;
+}
+
+.confetti:nth-child(10) {
+    left: 100%;
+    animation-duration: 4s;
+}
+
+.letter-container {
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #8B0000;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1; 
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.letter-header h1 {
+    font-family: 'Brush Script MT', cursive;
+    color: #8B0000;
+    margin: 0;
+}
+
+.letter-content {
+    font-size: 10px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.letter-content.visible {
+    opacity: 1;
+    height: auto; 
+    overflow: visible;
+}
+
+.show-all-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.show-all-btn:hover {
+    background-color: #a94442;
+}
